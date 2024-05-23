@@ -42,7 +42,7 @@
                                             <a href="{{ route('admin/products/edit', ['id'=>$product->id]) }}" type="button" class="btn btn-warning fs-6">Edit</a>
                                         </spam> 
                                         <spam class="p-2">
-                                            <a href="{{ route('admin/products/delete', ['id'=>$product->id]) }}" type="button" class="btn btn-danger fs-6">Delete</a>
+                                            <a href="{{ route('admin/products/delete', ['id'=>$product->id]) }}" onclick="return confirm('Are you sure?')" type="button" class="btn btn-danger fs-6">Delete</a>
                                         </spam>
                                     </div>
                                 </td>

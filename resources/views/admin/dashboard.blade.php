@@ -12,8 +12,8 @@
                     <h1>{{ __("Seja bem vindo!") }}</h1>
                     <div class="d-flex justify-content-start">
                         <p class="p-3"><a href="products" class="btn btn-primary fs-5">Produtos</a></p>
-                        <p class="p-3"><a href="products" class="btn btn-primary fs-5">Categoria</a></p>
-                        <p class="p-3"><a href="products" class="btn btn-primary fs-5">Funcionários</a></p>
+                        <p class="p-3"><a href="#" onclick="return confirm('EM CONSTRUÇÃO!')" class="btn btn-primary fs-5">Categoria</a></p>
+                        <p class="p-3"><a href="#" onclick="return confirm('EM CONSTRUÇÃO!')" class="btn btn-primary fs-5">Funcionários</a></p>
                     </div>                
                 </div>
             </div>
