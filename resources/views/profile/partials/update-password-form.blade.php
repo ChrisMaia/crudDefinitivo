@@ -32,7 +32,7 @@
         </div>
 
         <div class="flex items-center gap-4">
-            <x-primary-button>{{ __('Save') }}</x-primary-button>
+            <x-primary-button class="dark:bg-gray-800 btn btn-outline-primary">{{ __('Save') }}</x-primary-button>
 
             @if (session('status') === 'password-updated')
                 <p
