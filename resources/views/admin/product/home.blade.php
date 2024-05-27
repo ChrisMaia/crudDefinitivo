@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">      
-            {{ __('Admin Product') }}
+            {{ __('Página de administração de produtos') }}
         </h2>
     </x-slot>
  
@@ -10,8 +10,8 @@
             <div class="dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">    
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     <div class="d-flex align-items-center justify-content-between">
-                        <h1 class="mb-0">List Product</h1>
-                        <a href="{{ route('admin/products/create') }}" class="btn btn-primary">Add Product</a>
+                        <h1 class="mb-0">Lista de Produtos</h1>
+                        <a href="{{ route('admin/products/create') }}" class="btn btn-primary">Adicionar produto</a>
                     </div>
                     <hr />
                     @if (Session::has('success'))
@@ -23,10 +23,10 @@
                         <thead class="table-primary">
                             <tr>
                                 <th>#</th>
-                                <th>Title</th>
-                                <th>Category</th>
-                                <th>Price</th>
-                                <th>Action</th>
+                                <th>Nome</th>
+                                <th>Categoria</th>
+                                <th>Preço</th>
+                                <th>Ações</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -39,17 +39,17 @@
                                 <td class="align-middle">
                                     <div class="btn-group" role="group" aria-label="Basic example">
                                         <spam class="p-2 ">
-                                            <a href="{{ route('admin/products/edit', ['id'=>$product->id]) }}" type="button" class="btn btn-warning fs-6">Edit</a>
+                                            <a href="{{ route('admin/products/edit', ['id'=>$product->id]) }}" type="button" class="btn btn-warning fs-6">Editar</a>
                                         </spam> 
                                         <spam class="p-2">
-                                            <a href="{{ route('admin/products/delete', ['id'=>$product->id]) }}" onclick="return confirm('Are you sure?')" type="button" class="btn btn-danger fs-6">Delete</a>
+                                            <a href="{{ route('admin/products/delete', ['id'=>$product->id]) }}" onclick="return confirm('Você tem certeza?')" type="button" class="btn btn-danger fs-6">Deletar</a>
                                         </spam>
                                     </div>
                                 </td>
                             </tr>
                             @empty
                             <tr>
-                                <td class="text-center" colspan="5">Product not found</td>
+                                <td class="text-center" colspan="5">Produto não encontrado</td>
                             </tr>
                             @endforelse
                         </tbody>

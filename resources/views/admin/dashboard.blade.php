@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Admin Page') }}
+            {{ __('Página do administrador') }}
         </h2>
     </x-slot>
 
@@ -9,11 +9,11 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
-                    <h1>{{ __("Welcome to your system!") }}</h1>
+                    <h1>{{ __("Seja Bem-Vindo!") }}</h1>
                     <div class="d-flex justify-content-start">
-                        <p class="p-3"><a href="products" class="btn btn-primary fs-5">Products</a></p>
-                        <p class="p-3"><a href="#" onclick="return confirm('UNDER CONSTRUCTION!')" class="btn btn-primary fs-5">Category</a></p>
-                        <p class="p-3"><a href="#" onclick="return confirm('UNDER CONSTRUCTION!')" class="btn btn-primary fs-5">Employees</a></p>
+                        <p class="p-3"><a href="products" class="btn btn-primary fs-5">Produtos</a></p>
+                        <p class="p-3"><a href="#" onclick="return confirm('PÁGINA EM CONSTRUÇÃO!')" class="btn btn-primary fs-5">Categoria</a></p>
+                        <p class="p-3"><a href="#" onclick="return confirm('PÁGINA EM CONSTRUÇÃO!')" class="btn btn-primary fs-5">Funcionários</a></p>
                     </div>                
                 </div>
             </div>
