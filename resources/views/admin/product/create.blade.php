@@ -22,24 +22,27 @@
                     <form action="{{ route('admin/products/save') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="row mb-3">
-                            <div class="col">
-                                <input type="text" name="title" class="form-control" placeholder="Nome do Produto">
+                            <div class="col form-floating">
+                                <input type="text" name="title" class="form-control" id="floatingInput" placeholder="Nome do Produto">
+                                <label class="text-body-secondary ms-3"for="floatingInput">Nome do Produto</label>
                                 @error('title')
                                     <span class="text-danger">{{$message}}</span>
                                 @enderror
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <div class="col">
-                                <input type="text" name="category" class="form-control" placeholder="Categoria">
+                            <div class="col form-floating">
+                                <input type="text" name="category" class="form-control" id="floatingInput" placeholder="Categoria">
+                                <label class="text-body-secondary ms-3" for="floatingInput">Categoria</label>
                                 @error('category')
                                     <span class="text-danger">{{$message}}</span>
                                 @enderror
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <div class="col">
-                                <input type="number" name="price" class="form-control" step="0.01" placeholder="Preço">
+                            <div class="col form-floating"">
+                                <input type="number" name="price" class="form-control" id="floatingInput" step="0.01" placeholder="Preço">
+                                <label class="text-body-secondary  ms-3"for="floatingInput">preço</label>
                                 @error('price')
                                     <span class="text-danger">{{$message}}</span>
                                 @enderror

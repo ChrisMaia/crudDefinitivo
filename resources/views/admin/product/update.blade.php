@@ -15,27 +15,27 @@
                         @csrf
                         @method('PUT')
                         <div class="row">
-                            <div class="col mb-3">
-                                <label class="form-label">Nome do Produto</label>
-                                <input type="text" name="title" class="form-control" placeholder="Title" value="{{$products->title}}">
+                            <div class="col mb-3 form-floating"> 
+                                <input type="text" name="title" class="form-control" placeholder="Title" id="floatingInput" value="{{$products->title}}">
+                                <label class="form-label text-body-secondary ms-3"for="floatingInput">Nome do Produto</label>
                                 @error('title')
                                 <span class="text-danger">{{$message}}</span>
                                 @enderror
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col mb-3">
-                                <label class="form-label">Categoria</label>
-                                <input type="text" name="category" class="form-control" placeholder="Category" value="{{$products->category}}">
+                            <div class="col mb-3 form-floating">
+                                <input type="text" name="category" class="form-control" placeholder="Category" id="floatingInput" value="{{$products->category}}">
+                                <label class="form-label text-body-secondary ms-3"for="floatingInput">Categoria</label>
                                 @error('category')
                                 <span class="text-danger">{{$message}}</span>
                                 @enderror
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col mb-3">
-                                <label class="form-label">Preço</label>
-                                <input type="text" name="price" class="form-control" placeholder="Product Price" value="{{$products->price}}">
+                            <div class="col mb-3 form-floating">
+                                <input type="text" name="price" class="form-control" placeholder="Product Price" id="floatingInput" value="{{$products->price}}">
+                                <label class="form-label text-body-secondary ms-3"for="floatingInput">Preço</label>
                                 @error('price')
                                 <span class="text-danger">{{$message}}</span>
                                 @enderror
