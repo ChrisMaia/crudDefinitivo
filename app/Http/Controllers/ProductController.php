@@ -26,7 +26,7 @@ class ProductController extends Controller
         $data = Product::create($validation);
         if ($data) {
             session()->flash('success', 'Produto Adicionado com Sucesso');
-            return redirect(route('admin/products'));
+            return redirect(route('adminProducts.index'));
         } else {
             session()->flash('error', 'Ocorreu algum problema');
             return redirect(route('admin.products/create'));
@@ -43,10 +43,10 @@ class ProductController extends Controller
         $products = Product::findOrFail($id)->delete();
         if ($products) {
             session()->flash('success', 'Produto Deletado com Sucesso');
-            return redirect(route('admin/products'));
+            return redirect(route('adminProducts.index'));
         } else {
             session()->flash('error', 'Produto Não Deletado com Sucesso');
-            return redirect(route('admin/products'));
+            return redirect(route('adminProducts.index'));
         }
     }
 
@@ -63,7 +63,7 @@ class ProductController extends Controller
         $data = $products->save();
         if ($data) {
             session()->flash('success', 'Produto Atualizado com Sucesso');
-            return redirect(route('admin/products'));
+            return redirect(route('adminProducts.index'));
         } else {
             session()->flash('error', 'Ocorreu algum problema');
             return redirect(route('admin/products/update'));

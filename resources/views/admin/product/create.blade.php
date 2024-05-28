@@ -17,7 +17,7 @@
                         </div>
                     @endif
 
-                    <p><a href="{{ route('admin/products') }}" class="btn btn-primary">Voltar</a></p>
+                    <p><a href="{{ route('adminProducts.index') }}" class="btn btn-primary">Voltar</a></p>
 
                     <form action="{{ route('admin/products/save') }}" method="POST" enctype="multipart/form-data">
                         @csrf
