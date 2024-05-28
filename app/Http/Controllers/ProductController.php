@@ -17,7 +17,7 @@ class ProductController extends Controller
         return view('admin.product.create');
     }
 
-    public function save(Request $request){
+    public function store(Request $request){
         $validation = $request->validate([
             'title' => 'required',
             'category' => 'required',
