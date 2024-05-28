@@ -38,7 +38,7 @@ class ProductController extends Controller
         return view('admin.product.update', compact('products'));
     }
 
-    public function delete($id)
+    public function destroy($id)
     {
         $products = Product::findOrFail($id)->delete();
         if ($products) {
