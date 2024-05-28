@@ -52,6 +52,12 @@ class ProductController extends Controller
 
     public function update(Request $request, $id)
     {
+        $validation = $request->validate([
+            'title' => 'required',
+            'category' => 'required',
+            'price' => 'required',
+        ]);
+        
         $products = Product::findOrFail($id);
         $title = $request->title;
         $category = $request->category;
