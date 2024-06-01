@@ -102,11 +102,11 @@
 <footer class="py-4 dark:bg-gray-800 mt-auto fixed-bottom">
     <div class="container-fluid px-4">
         <div class="d-flex align-items-center justify-content-between small">
-            <div class="text-light">Copyright &copy;CAA2023</div>
+            <div class="text-light">Copyright &copy;CAA2024</div>
             <div>
-                <a href="#">Privacy Policy</a>
+                <a href="#">Política de Privacidade</a>
                 &middot;
-                <a href="#">Terms &amp; Conditions</a>
+                <a href="#">Termos e Condições</a>
             </div>
         </div>
     </div>
