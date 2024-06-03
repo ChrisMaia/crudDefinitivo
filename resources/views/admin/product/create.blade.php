@@ -42,7 +42,7 @@
                         <div class="row mb-3">
                             <div class="col form-floating"">
                                 <input type="number" name="price" class="form-control" id="floatingInput" step="0.01" placeholder="Preço">
-                                <label class="text-body-secondary  ms-3"for="floatingInput">preço</label>
+                                <label class="text-body-secondary  ms-3"for="floatingInput">Preço</label>
                                 @error('price')
                                     <span class="text-danger">{{$message}}</span>
                                 @enderror
