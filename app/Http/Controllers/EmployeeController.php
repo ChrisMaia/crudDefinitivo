@@ -18,9 +18,9 @@ class EmployeeController extends Controller
 
     public function store(Request $request){
         $validation = $request->validate([
-            'title' => 'required',
-            'dataNacimento' => 'required',
-            'CPF' => 'required',
+            'name' => 'required',
+            'data_nascimento' => 'required',
+            'cpf' => 'required',
             'telefone' => 'required',
             'email' => 'required',
         ]);
