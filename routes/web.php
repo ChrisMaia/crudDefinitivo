@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\EmployeeController;
-use App\Models\Employee;
+
 
 Route::get('/', function () {
     return view('dashboard');
@@ -33,6 +33,9 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/admin/products/{id}', [ProductController::class, 'destroy'])->name('adminProducts.destroy');
     //employees:
     Route::get('/admin/employees', [EmployeeController::class, 'index'])->name('adminEmployees.index');
+    Route::get('/admin/employees/create', [EmployeeController::class, 'create'])->name('adminEmployees.create');    
+    Route::post('/admin/employees', [EmployeeController::class, 'store'])->name('adminEmployees.store');
+    
 });
 
 

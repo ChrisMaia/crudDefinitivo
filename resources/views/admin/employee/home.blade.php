@@ -11,6 +11,14 @@
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     <div class="d-flex align-items-center justify-content-between">
                         <h1 class="mb-0">Lista de Funcionários</h1>
+                        <a href="{{ route('adminEmployees.create') }}" class="btn btn-primary">Adicionar Funcionários</a>
+                    </div>
+                    <hr />
+                    @if (Session::has('success'))
+                        <div class="alert alert-success" role="alert">
+                            {{ Session::get('success') }}
+                        </div>
+                    @endif
                     </div>
                 </div>
             </div>
