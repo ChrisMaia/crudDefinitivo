@@ -32,7 +32,7 @@
                         </div>
                         <div class="row mb-3">
                             <div class="col form-floating">
-                                <input type="text" name="data_nascimento" class="form-control" id="floatingInput" placeholder="Data de Nacimento">
+                                <input type="date" name="data_nascimento" class="form-control" id="floatingInput" placeholder="Data de Nacimento">
                                 <label class="text-body-secondary ms-3" for="floatingInput">Data de Nacimento</label>
                                 @error('data_nascimento')
                                     <span class="text-danger">{{$message}}</span>
@@ -41,7 +41,7 @@
                         </div>
                         <div class="row mb-3">
                             <div class="col form-floating">
-                                <input type="text" name="cpf" class="form-control" id="floatingInput"  placeholder="CPF">
+                                <input type="text" name="cpf" class="form-control floatingInput" id="cpf" placeholder="CPF" maxlength="14">
                                 <label class="text-body-secondary  ms-3"for="floatingInput">CPF</label>
                                 @error('cpf')
                                     <span class="text-danger">{{$message}}</span>
@@ -59,7 +59,7 @@
                         </div>
                         <div class="row mb-3">
                             <div class="col form-floating">
-                                <input type="text" name="email" class="form-control" id="floatingInput" placeholder="Email">
+                                <input type="email" name="email" class="form-control" id="floatingInput" placeholder="Email">
                                 <label class="text-body-secondary ms-3" for="floatingInput">Email</label>
                                 @error('email')
                                     <span class="text-danger">{{$message}}</span>
