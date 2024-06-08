@@ -1,2 +1,4 @@
 [0518/185949.744:ERROR:registration_protocol_win.cc(107)] CreateFile: O sistema n„o pode encontrar o arquivo especificado. (0x2)
 [0518/190009.933:ERROR:registration_protocol_win.cc(107)] CreateFile: O sistema n„o pode encontrar o arquivo especificado. (0x2)
+[0608/135251.159:ERROR:registration_protocol_win.cc(108)] CreateFile: O sistema n√£o pode encontrar o arquivo especificado. (0x2)
+[0608/135308.199:ERROR:registration_protocol_win.cc(108)] CreateFile: O sistema n√£o pode encontrar o arquivo especificado. (0x2)
