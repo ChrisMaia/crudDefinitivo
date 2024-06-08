@@ -36,5 +36,11 @@ class EmployeeController extends Controller
             session()->flash('error', 'Ocorreu algum problema');
             return redirect(route('admin.Employees/create'));
         }
+        
+    }
+
+    public function edit($id){
+        $employees = Employee::findOrFail($id);
+        return view('admin.employee.update', compact('employees'));
     }
 }
