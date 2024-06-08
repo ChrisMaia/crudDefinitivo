@@ -43,4 +43,37 @@ class EmployeeController extends Controller
         $employees = Employee::findOrFail($id);
         return view('admin.employee.update', compact('employees'));
     }
+
+    public function update(Request $request, $id)
+    {
+        $validation = $request->validate([
+            'name' => 'required',
+            'data_nascimento' => 'required',
+            'cpf' => ['required', new CPF],
+            'telefone' => ['required', new telefone],
+            'email' => 'required',
+        ]);
+        
+        $employees = Employee::findOrFail($id);
+        $name = $request->name;
+        $data_nascimento = $request->data_nascimento;
+        $cpf = $request->cpf;
+        $telefone = $request->telefone;
+        $email = $request->email;
+
+        $employees->name = $name;
+        $employees->data_nascimento = $data_nascimento;
+        $employees->cpf = $cpf;
+        $employees->telefone = $telefone;
+        $employees->email = $email;
+
+        $data = $employees->save();
+        if ($data) {
+            session()->flash('success', 'Funcionário Atualizado com Sucesso');
+            return redirect(route('adminEmployees.index'));
+        } else {
+            session()->flash('error', 'Ocorreu algum problema');
+            return redirect(route('adminEmployees.update'));
+        }
+    }
 }

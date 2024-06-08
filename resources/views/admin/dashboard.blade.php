@@ -12,7 +12,7 @@
                     <h1>{{ __("Seja Bem-Vindo!") }}</h1>
                     <div class="d-flex justify-content-start">
                         <p class="p-3"><a href="products" class="btn btn-primary fs-5">Produtos</a></p>
-                        <p class="p-3"><a href="#" onclick="return confirm('PÁGINA EM CONSTRUÇÃO!')" class="btn btn-warning text-light fs-5">Categoria</a></p>
+                        <p class="p-3"><a href="#" onclick="return confirm('PÁGINA EM CONSTRUÇÃO!')" class="btn btn-warning text-light fs-5">Categorias dos Produtos</a></p>
                         <p class="p-3"><a href="employees" class="btn btn-success fs-5">Funcionários</a></p>
                     </div>                
                 </div>
