@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Rules\CPF;
 use App\Models\Employee;
+use App\Rules\telefone;
+use Illuminate\Http\Request;
 
 
 class EmployeeController extends Controller
@@ -20,8 +22,8 @@ class EmployeeController extends Controller
         $validation = $request->validate([
             'name' => 'required',
             'data_nascimento' => 'required',
-            'cpf' => 'required',
-            'telefone' => 'required',
+            'cpf' => ['required', new CPF],
+            'telefone' => ['required', new telefone],
             'email' => 'required',
         ]);
         $data = Employee::create($validation);

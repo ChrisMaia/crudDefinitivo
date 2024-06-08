@@ -41,7 +41,7 @@
                         </div>
                         <div class="row mb-3">
                             <div class="col form-floating">
-                                <input type="text" name="cpf" class="form-control floatingInput" id="cpf" placeholder="CPF" maxlength="14">
+                                <input type="text" name="cpf" class="form-control floatingInput" id="cpf" placeholder="000.000.000-00" maxlength="14">
                                 <label class="text-body-secondary  ms-3"for="floatingInput">CPF</label>
                                 @error('cpf')
                                     <span class="text-danger">{{$message}}</span>
