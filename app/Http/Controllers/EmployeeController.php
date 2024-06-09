@@ -44,6 +44,18 @@ class EmployeeController extends Controller
         return view('admin.employee.update', compact('employees'));
     }
 
+    public function destroy($id)
+    {
+        $employees = Employee::findOrFail($id)->delete();
+        if ($employees) {
+            session()->flash('success', 'Funcionário Deletado com Sucesso');
+            return redirect(route('adminEmployees.index'));
+        } else {
+            session()->flash('error', 'Funcionário Não foi Deletado com Sucesso');
+            return redirect(route('adminEmployees.index'));
+        }
+    }
+
     public function update(Request $request, $id)
     {
         $validation = $request->validate([

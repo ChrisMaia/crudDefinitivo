@@ -37,7 +37,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::post('/admin/employees', [EmployeeController::class, 'store'])->name('adminEmployees.store');
     Route::get('/admin/employees/edit/{id}', [EmployeeController::class, 'edit'])->name('adminEmployees.edit');
     Route::put('/admin/employees/{id}', [EmployeeController::class, 'update'])->name('adminEmployees.update');
-
+    Route::get('/admin/employees/{id}', [EmployeeController::class, 'destroy'])->name('adminEmployees.destroy');
 });
 
 
