@@ -39,10 +39,10 @@
                                 <td class="align-middle">
                                     <div class="btn-group" role="group" aria-label="Basic example">
                                         <spam class="p-2 ">
-                                            <a href="{{ route('adminProducts.edit', ['id'=>$category->id]) }}" type="button" class="btn btn-warning fs-6">Editar</a>
+                                            <a href="{{ route('adminCategories.edit', ['id'=>$category->id]) }}" type="button" class="btn btn-warning fs-6">Editar</a>
                                         </spam> 
                                         <spam class="p-2">
-                                            <a href="{{ route('adminProducts.destroy', ['id'=>$category->id]) }}" onclick="return confirm('Você tem certeza?')" type="button" class="btn btn-danger fs-6">Deletar</a>
+                                            <a href="{{ route('adminCategories.destroy', ['id'=>$category->id]) }}" onclick="return confirm('Você tem certeza?')" type="button" class="btn btn-danger fs-6">Deletar</a>
                                         </spam>
                                     </div>
                                 </td>
