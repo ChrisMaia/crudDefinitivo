@@ -34,7 +34,7 @@ class EmployeeController extends Controller
             return redirect(route('adminEmployees.index'));
         } else {
             session()->flash('error', 'Ocorreu algum problema');
-            return redirect(route('admin.Employees/create'));
+            return redirect(route('adminEmployees.create'));
         }
         
     }

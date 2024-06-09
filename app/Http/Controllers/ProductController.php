@@ -29,7 +29,7 @@ class ProductController extends Controller
             return redirect(route('adminProducts.index'));
         } else {
             session()->flash('error', 'Ocorreu algum problema');
-            return redirect(route('admin.products/create'));
+            return redirect(route('adminProducts.create'));
         }
     }
 

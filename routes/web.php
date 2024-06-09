@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\EmployeeController;
-
+use App\Http\Controllers\CategoryController;
 
 Route::get('/', function () {
     return view('dashboard');
@@ -31,13 +31,18 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/admin/products/edit/{id}', [ProductController::class, 'edit'])->name('adminProducts.edit');
     Route::put('/admin/products/{id}', [ProductController::class, 'update'])->name('adminProducts.update');
     Route::get('/admin/products/{id}', [ProductController::class, 'destroy'])->name('adminProducts.destroy');
-    //employees:
+    //Employees:
     Route::get('/admin/employees', [EmployeeController::class, 'index'])->name('adminEmployees.index');
     Route::get('/admin/employees/create', [EmployeeController::class, 'create'])->name('adminEmployees.create');    
     Route::post('/admin/employees', [EmployeeController::class, 'store'])->name('adminEmployees.store');
     Route::get('/admin/employees/edit/{id}', [EmployeeController::class, 'edit'])->name('adminEmployees.edit');
     Route::put('/admin/employees/{id}', [EmployeeController::class, 'update'])->name('adminEmployees.update');
     Route::get('/admin/employees/{id}', [EmployeeController::class, 'destroy'])->name('adminEmployees.destroy');
+    //Catogories
+    Route::get('/admin/categories', [CategoryController::class, 'index'])->name('adminCategories.index');
+    Route::get('/admin/categories/create', [CategoryController::class, 'create'])->name('adminCategories.create');    
+    Route::post('/admin/categories', [CategoryController::class, 'store'])->name('adminCategories.store');
+
 });
 
 
