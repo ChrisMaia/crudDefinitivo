@@ -40,8 +40,8 @@
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <div class="col form-floating">
-                                <input type="text" name="cpf" class="form-control floatingInput" id="cpf" placeholder="000.000.000-00" maxlength="14">
+                            <div class="col form-floating" x-data="{ data : ' ' }">
+                                <input type="text" name="cpf" class="form-control floatingInput" id="cpf" x-mask="999.999.999-99">
                                 <label class="text-body-secondary  ms-3"for="floatingInput">CPF</label>
                                 @error('cpf')
                                     <span class="text-danger">{{$message}}</span>
@@ -77,4 +77,9 @@
             </div>
         </div>
     </div>
+<!-- Alpine Plugins -->
+<script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/mask@3.x.x/dist/cdn.min.js"></script>
+ 
+<!-- Alpine Core -->
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </x-app-layout>
