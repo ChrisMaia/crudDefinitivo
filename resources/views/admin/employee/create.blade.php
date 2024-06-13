@@ -49,8 +49,8 @@
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <div class="col form-floating">
-                                <input type="text" name="telefone" class="form-control" id="floatingInput" placeholder="Telefone">
+                            <div class="col form-floating" x-data="{ cpf : ' ' }">
+                                <input type="text" name="telefone" class="form-control" id="floatingInput" placeholder="Telefone" x-mask="(99) 99999-9999">
                                 <label class="text-body-secondary ms-3" for="floatingInput">Telefone</label>
                                 @error('telefone')
                                     <span class="text-danger">{{$message}}</span>
