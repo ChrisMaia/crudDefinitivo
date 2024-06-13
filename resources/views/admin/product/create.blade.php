@@ -40,8 +40,8 @@
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <div class="col form-floating"">
-                                <input type="number" name="price" class="form-control" id="floatingInput" step="0.01" placeholder="Preço">
+                            <div class="col form-floating" x-data="{ price: '' }" >
+                                <input type="text" name="price" class="form-control" id="floatingInput" placeholder="Preço" x-model="price" x-on:input="price = price.replace(/\D/g, '').replace(/(\d{2})$/, ',$1').replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ')">
                                 <label class="text-body-secondary  ms-3"for="floatingInput">Preço</label>
                                 @error('price')
                                     <span class="text-danger">{{$message}}</span>
@@ -59,4 +59,10 @@
             </div>
         </div>
     </div>
+    <!-- Alpine Plugins -->
+<script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/mask@3.x.x/dist/cdn.min.js"></script>
+ 
+ <!-- Alpine Core -->
+ <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+ 
 </x-app-layout>
