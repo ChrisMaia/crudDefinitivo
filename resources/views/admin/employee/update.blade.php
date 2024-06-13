@@ -33,8 +33,8 @@
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <div class="col form-floating">
-                                <input type="text" name="cpf" class="form-control floatingInput" id="cpf" placeholder="000.000.000-00" maxlength="14" value="{{$employees->cpf}}">
+                            <div class="col form-floating" x-data="{ cpf : ' ' }">
+                                <input type="text" name="cpf" class="form-control floatingInput" id="cpf" value="{{$employees->cpf}}" x-mask="999.999.999-99">
                                 <label class="text-body-secondary  ms-3"for="floatingInput">CPF</label>
                                 @error('cpf')
                                     <span class="text-danger">{{$message}}</span>
@@ -42,8 +42,8 @@
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <div class="col form-floating">
-                                <input type="text" name="telefone" class="form-control" id="floatingInput" placeholder="Telefone" value="{{$employees->telefone}}">
+                            <div class="col form-floating" x-data="{ telefone : ' ' }">
+                                <input type="text" name="telefone" class="form-control" id="floatingInput" placeholder="Telefone" value="{{$employees->telefone}}" x-mask="(99) 99999-9999">
                                 <label class="text-body-secondary ms-3" for="floatingInput">Telefone</label>
                                 @error('telefone')
                                     <span class="text-danger">{{$message}}</span>
@@ -69,4 +69,11 @@
             </div>
         </div>
     </div>
+
+    <!-- Alpine Plugins -->
+<script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/mask@3.x.x/dist/cdn.min.js"></script>
+ 
+ <!-- Alpine Core -->
+ <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+ 
 </x-app-layout>

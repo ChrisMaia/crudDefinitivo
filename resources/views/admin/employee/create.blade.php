@@ -40,7 +40,7 @@
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <div class="col form-floating" x-data="{ data : ' ' }">
+                            <div class="col form-floating" x-data="{ cpf : ' ' }">
                                 <input type="text" name="cpf" class="form-control floatingInput" id="cpf" x-mask="999.999.999-99">
                                 <label class="text-body-secondary  ms-3"for="floatingInput">CPF</label>
                                 @error('cpf')
@@ -49,7 +49,7 @@
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <div class="col form-floating" x-data="{ cpf : ' ' }">
+                            <div class="col form-floating" x-data="{ telefone : ' ' }">
                                 <input type="text" name="telefone" class="form-control" id="floatingInput" placeholder="Telefone" x-mask="(99) 99999-9999">
                                 <label class="text-body-secondary ms-3" for="floatingInput">Telefone</label>
                                 @error('telefone')
