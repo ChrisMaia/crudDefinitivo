@@ -10,6 +10,11 @@ class ProductController extends Controller
     public function index(){
         $products = Product::orderBy('id', 'desc')->get();
         $total = Product::count();
+        // $c = with('category');
+        //dd($products);
+        
+     
+
         return view('admin.product.home', compact(['products', 'total']));
     }
 
