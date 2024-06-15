@@ -10,11 +10,6 @@ class ProductController extends Controller
     public function index(){
         $products = Product::orderBy('id', 'desc')->get();
         $total = Product::count();
-        // $c = with('category');
-        //dd($products);
-        
-     
-
         return view('admin.product.home', compact(['products', 'total']));
     }
 
@@ -25,7 +20,7 @@ class ProductController extends Controller
     public function store(Request $request){
         $validation = $request->validate([
             'title' => 'required',
-            'category' => 'required',
+            'category_id' => 'required',
             'price' => 'required',
         ]);
         $data = Product::create($validation);
@@ -59,17 +54,17 @@ class ProductController extends Controller
     {
         $validation = $request->validate([
             'title' => 'required',
-            'category' => 'required',
+            'category_id' => 'required',
             'price' => 'required',
         ]);
         
         $products = Product::findOrFail($id);
         $title = $request->title;
-        $category = $request->category;
+        $category = $request->category_id;
         $price = $request->price;
  
         $products->title = $title;
-        $products->category = $category;
+        $products->category_id = $category;
         $products->price = $price;
         $data = $products->save();
         if ($data) {
