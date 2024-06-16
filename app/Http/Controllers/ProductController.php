@@ -26,9 +26,17 @@ class ProductController extends Controller
         $validation = $request->validate([
             'title' => 'required',
             'category_id' => 'required',
-            'price' => 'required',
+            'price' => 'required|regex:/^\d{1,3}(?:\.\d{3})*(?:,\d{1,2})?$/',
         ]);
-        $data = Product::create($validation);
+
+        $price = str_replace(['.', ','], ['', '.'], $validation['price']);
+
+        $data = Product::create([
+            'title' => $validation['title'],
+            'category_id' => $validation['category_id'],
+            'price' => floatval($price),
+        ]);
+
         if ($data) {
             session()->flash('success', 'Produto Adicionado com Sucesso');
             return redirect(route('adminProducts.index'));
@@ -62,17 +70,18 @@ class ProductController extends Controller
         $validation = $request->validate([
             'title' => 'required',
             'category_id' => 'required',
-            'price' => 'required',
+            'price' => 'required|regex:/^\d{1,3}(?:\.\d{3})*(?:,\d{1,2})?$/',
         ]);
+
+        $price = str_replace(['.', ','], ['', '.'], $validation['price']);
         
         $products = Product::findOrFail($id);
         $title = $request->title;
         $category_id = $request->category_id;
-        $price = $request->price;
  
         $products->title = $title;
         $products->category_id = $category_id;
-        $products->price = $price;
+        $products->price = floatval($price);
         $data = $products->save();
         if ($data) {
             session()->flash('success', 'Produto Atualizado com Sucesso');

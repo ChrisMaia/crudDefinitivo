@@ -34,19 +34,11 @@
                                     @endforeach
                                 </select>
 
-
-<!--
-                                <input type="text" name="category" class="form-control" placeholder="Category" id="floatingInput" value="{{$products->category}}">
-                                <label class="form-label text-body-secondary ms-3"for="floatingInput">Categoria</label>
-                                @error('category')
-                                <span class="text-danger">{{$message}}</span>
-                                @enderror
--->
                             </div>
                         </div>
                         <div class="row">
                             <div class="col mb-3 form-floating">
-                                <input type="number" name="price" class="form-control" placeholder="Product Price" step="0.01" id="floatingInput" value="{{$products->price}}">
+                                <input type="text" name="price" class="form-control floatingInput" id="price" value="{{$products->price}}">
                                 <label class="form-label text-body-secondary ms-3"for="floatingInput">Preço</label>
                                 @error('price')
                                 <span class="text-danger">{{$message}}</span>
@@ -63,4 +55,6 @@
             </div>
         </div>
     </div>
+
+<script src="{{ asset('js/custom.js') }}"></script>
 </x-app-layout>

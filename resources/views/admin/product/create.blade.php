@@ -39,19 +39,11 @@
                                         <option value="{{ $category->id }}">{{ $category->name }}</option>
                                     @endforeach
                                 </select>
-
-<!--
-                                <input type="text" name="category" class="form-control" id="floatingInput" placeholder="Categoria">
-                                <label class="text-body-secondary ms-3" for="floatingInput">Categoria</label>
-                                @error('category')
-                                    <span class="text-danger">{{$message}}</span>
-                                @enderror
--->
                             </div>
                         </div>
                         <div class="row mb-3">
                         <div class="col form-floating">
-                                <input type="number" name="price" class="form-control" id="floatingInput" step="0.01" placeholder="Preço">
+                                <input type="text" name="price" class="form-control floatingInput" id="price" placeholder="Preço">
                                 <label class="text-body-secondary  ms-3"for="floatingInput">Preço</label>
                                 @error('price')
                                     <span class="text-danger">{{$message}}</span>
@@ -72,7 +64,9 @@
     <!-- Alpine Plugins -->
 <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/mask@3.x.x/dist/cdn.min.js"></script>
  
- <!-- Alpine Core -->
- <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- Alpine Core -->
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+<script src="{{ asset('js/custom.js') }}"></script>
  
 </x-app-layout>
