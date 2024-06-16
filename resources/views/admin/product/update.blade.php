@@ -16,7 +16,7 @@
                         @method('PUT')
                         <div class="row">
                             <div class="col mb-3 form-floating"> 
-                                <input type="text" name="title" class="form-control" placeholder="Title" id="floatingInput" value="{{$products->title}}">
+                                <input type="text" name="title" class="form-control" placeholder="Title" id="floatingInput" value="{{ old('title', $products->title)}}">
                                 <label class="form-label text-body-secondary ms-3"for="floatingInput">Nome do Produto</label>
                                 @error('title')
                                 <span class="text-danger">{{$message}}</span>
@@ -38,7 +38,7 @@
                         </div>
                         <div class="row">
                             <div class="col mb-3 form-floating">
-                                <input type="text" name="price" class="form-control floatingInput" id="price" value="{{number_format($products->price, 2 , ',' , '.' )}}">
+                                <input type="text" name="price" class="form-control floatingInput" id="price" value="{{ old('price',number_format($products->price, 2 , ',' , '.' ))}}">
                                 <label class="form-label text-body-secondary ms-3"for="floatingInput">Preço</label>
                                 @error('price')
                                 <span class="text-danger">O formato do campo Preço é inválido.</span>

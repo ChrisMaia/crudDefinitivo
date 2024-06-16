@@ -16,7 +16,7 @@
                         @method('PUT')
                         <div class="row mb-3">
                             <div class="col form-floating">
-                                <input type="text" name="name" class="form-control" id="floatingInput" placeholder="Nome do Funcionário" value="{{$employees->name}}">
+                                <input type="text" name="name" class="form-control" id="floatingInput" placeholder="Nome do Funcionário" value="{{ old('name',$employees->name )}}">
                                 <label class="text-body-secondary ms-3"for="floatingInput">Nome do Funcionário</label>
                                 @error('name')
                                     <span class="text-danger">{{$message}}</span>
@@ -25,7 +25,7 @@
                         </div>
                         <div class="row mb-3">
                             <div class="col form-floating">
-                                <input type="date" name="data_nascimento" class="form-control" id="floatingInput" placeholder="Data de Nacimento" value="{{$employees->data_nascimento}}">
+                                <input type="date" name="data_nascimento" class="form-control" id="floatingInput" placeholder="Data de Nacimento" value="{{ old('data_nascimento',$employees->data_nascimento)}}">
                                 <label class="text-body-secondary ms-3" for="floatingInput">Data de Nacimento</label>
                                 @error('data_nascimento')
                                     <span class="text-danger">{{$message}}</span>
@@ -34,7 +34,7 @@
                         </div>
                         <div class="row mb-3">
                             <div class="col form-floating" x-data="{ cpf : ' ' }">
-                                <input type="text" name="cpf" class="form-control floatingInput" id="cpf" value="{{$employees->cpf}}" x-mask="999.999.999-99">
+                                <input type="text" name="cpf" class="form-control floatingInput" id="cpf" value="{{ old('cpf',$employees->cpf)}}" x-mask="999.999.999-99">
                                 <label class="text-body-secondary  ms-3"for="floatingInput">CPF</label>
                                 @error('cpf')
                                     <span class="text-danger">{{$message}}</span>
@@ -43,7 +43,7 @@
                         </div>
                         <div class="row mb-3">
                             <div class="col form-floating" x-data="{ telefone : ' ' }">
-                                <input type="text" name="telefone" class="form-control" id="floatingInput" placeholder="Telefone" value="{{$employees->telefone}}" x-mask="(99) 99999-9999">
+                                <input type="text" name="telefone" class="form-control" id="floatingInput" placeholder="Telefone" value="{{ old('telefone',$employees->telefone)}}" x-mask="(99) 99999-9999">
                                 <label class="text-body-secondary ms-3" for="floatingInput">Telefone</label>
                                 @error('telefone')
                                     <span class="text-danger">{{$message}}</span>
@@ -52,7 +52,7 @@
                         </div>
                         <div class="row mb-3">
                             <div class="col form-floating">
-                                <input type="email" name="email" class="form-control" id="floatingInput" placeholder="Email" value="{{$employees->email}}">
+                                <input type="email" name="email" class="form-control" id="floatingInput" placeholder="Email" value="{{ old('email',$employees->email)}}">
                                 <label class="text-body-secondary ms-3" for="floatingInput">Email</label>
                                 @error('email')
                                     <span class="text-danger">{{$message}}</span>

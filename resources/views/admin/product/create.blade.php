@@ -23,7 +23,7 @@
                         @csrf
                         <div class="row mb-3">
                             <div class="col form-floating">
-                                <input type="text" name="title" class="form-control" id="floatingInput" placeholder="Nome do Produto">
+                                <input type="text" name="title" class="form-control" id="floatingInput" placeholder="Nome do Produto" value="{{old('title')}}">
                                 <label class="text-body-secondary ms-3"for="floatingInput">Nome do Produto</label>
                                 @error('title')
                                     <span class="text-danger">{{$message}}</span>
@@ -43,7 +43,7 @@
                         </div>
                         <div class="row mb-3">
                         <div class="col form-floating">
-                                <input type="text" name="price" class="form-control floatingInput" id="price" placeholder="Preço">
+                                <input type="text" name="price" class="form-control floatingInput" id="price" placeholder="Preço" value="{{old('price')}}">
                                 <label class="text-body-secondary  ms-3"for="floatingInput">Preço</label>
                                 @error('price')
                                     <span class="text-danger">{{$message}}</span>

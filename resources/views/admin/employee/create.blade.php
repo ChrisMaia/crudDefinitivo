@@ -23,7 +23,7 @@
                         @csrf
                         <div class="row mb-3">
                             <div class="col form-floating">
-                                <input type="text" name="name" class="form-control" id="floatingInput" placeholder="Nome do Funcionário">
+                                <input type="text" name="name" class="form-control" id="floatingInput" placeholder="Nome do Funcionário " value="{{old('name')}}">
                                 <label class="text-body-secondary ms-3"for="floatingInput">Nome do Funcionário</label>
                                 @error('name')
                                     <span class="text-danger">{{$message}}</span>
@@ -32,7 +32,7 @@
                         </div>
                         <div class="row mb-3">
                             <div class="col form-floating">
-                                <input type="date" name="data_nascimento" class="form-control" id="floatingInput" placeholder="Data de Nacimento">
+                                <input type="date" name="data_nascimento" class="form-control" id="floatingInput" placeholder="Data de Nacimento" value="{{old('data_nascimento')}}">
                                 <label class="text-body-secondary ms-3" for="floatingInput">Data de Nacimento</label>
                                 @error('data_nascimento')
                                     <span class="text-danger">{{$message}}</span>
@@ -41,7 +41,7 @@
                         </div>
                         <div class="row mb-3">
                             <div class="col form-floating" x-data="{ cpf : ' ' }">
-                                <input type="text" name="cpf" class="form-control floatingInput" id="cpf" x-mask="999.999.999-99">
+                                <input type="text" name="cpf" class="form-control floatingInput" id="cpf" x-mask="999.999.999-99" value="{{old('cpf')}}">
                                 <label class="text-body-secondary  ms-3"for="floatingInput">CPF</label>
                                 @error('cpf')
                                     <span class="text-danger">{{$message}}</span>
@@ -50,7 +50,7 @@
                         </div>
                         <div class="row mb-3">
                             <div class="col form-floating" x-data="{ telefone : ' ' }">
-                                <input type="text" name="telefone" class="form-control" id="floatingInput" placeholder="Telefone" x-mask="(99) 99999-9999">
+                                <input type="text" name="telefone" class="form-control" id="floatingInput" placeholder="Telefone" x-mask="(99) 99999-9999" value="{{old('telefone')}}">
                                 <label class="text-body-secondary ms-3" for="floatingInput">Telefone</label>
                                 @error('telefone')
                                     <span class="text-danger">{{$message}}</span>
@@ -59,7 +59,7 @@
                         </div>
                         <div class="row mb-3">
                             <div class="col form-floating">
-                                <input type="email" name="email" class="form-control" id="floatingInput" placeholder="Email">
+                                <input type="email" name="email" class="form-control" id="floatingInput" placeholder="Email" value="{{old('email')}}">
                                 <label class="text-body-secondary ms-3" for="floatingInput">Email</label>
                                 @error('email')
                                     <span class="text-danger">{{$message}}</span>

@@ -16,7 +16,7 @@
                         @method('PUT')
                         <div class="row">
                             <div class="col mb-3 form-floating"> 
-                                <input type="text" name="name" class="form-control" placeholder="Title" id="floatingInput" value="{{$categories->name}}">
+                                <input type="text" name="name" class="form-control" placeholder="Title" id="floatingInput" value="{{ old('name', $categories->name) }}">
                                 <label class="form-label text-body-secondary ms-3"for="floatingInput">Nome da Categoria</label>
                                 @error('name')
                                 <span class="text-danger">{{$message}}</span>
@@ -25,7 +25,7 @@
                         </div>
                         <div class="row">
                             <div class="col mb-3 form-floating">
-                                <input type="text" name="description" class="form-control" placeholder="description" id="floatingInput" value="{{$categories->description}}">
+                                <input type="text" name="description" class="form-control" placeholder="description" id="floatingInput" value="{{ old('description', $categories->description)}}">
                                 <label class="form-label text-body-secondary ms-3"for="floatingInput">Descrição</label>
                                 @error('description')
                                 <span class="text-danger">{{$message}}</span>
