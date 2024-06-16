@@ -23,9 +23,16 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col mb-3 form-floating">
-                        
+                        <div class="row mb-3">
+                            <div class="col ">
+                                <label for="category_id">Categoria:</label>
+                                <select id="category" name="category_id" class="form-control" required>
+                                    @foreach ($categories as $category)
+                                        <option value="{{ $category->id }}" {{ $products->category_id == $category->id ? 'selected' : '' }}>
+                                            {{ $category->name }}
+                                        </option>
+                                    @endforeach
+                                </select>
 
 
 <!--

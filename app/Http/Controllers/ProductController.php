@@ -40,7 +40,9 @@ class ProductController extends Controller
 
     public function edit($id){
         $products = Product::findOrFail($id);
-        return view('admin.product.update', compact('products'));
+        $categories = Category::all();
+      
+        return view('admin.product.update', compact('products', 'categories'));
     }
 
     public function destroy($id)
@@ -65,11 +67,11 @@ class ProductController extends Controller
         
         $products = Product::findOrFail($id);
         $title = $request->title;
-        $category = $request->category_id;
+        $category_id = $request->category_id;
         $price = $request->price;
  
         $products->title = $title;
-        $products->category_id = $category;
+        $products->category_id = $category_id;
         $products->price = $price;
         $data = $products->save();
         if ($data) {
