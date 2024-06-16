@@ -34,7 +34,9 @@
                             <tr>
                                 <td class="align-middle">{{ $loop->iteration }}</td>
                                 <td class="align-middle">{{ $product->title }}</td>
+
                                 <td class="align-middle">{{ $product->category->name }}</td>
+
                                 <td class="align-middle">R$ {{ number_format($product->price, 2 , ',' , '.' )}}</td>
                                 <td class="align-middle">
                                     <div class="btn-group" role="group" aria-label="Basic example">

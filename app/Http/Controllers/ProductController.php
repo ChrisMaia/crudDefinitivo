@@ -4,17 +4,22 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\Category;
+
 
 class ProductController extends Controller
 {
     public function index(){
         $products = Product::orderBy('id', 'desc')->get();
         $total = Product::count();
+        $produtos = Product::with('category')->get();
         return view('admin.product.home', compact(['products', 'total']));
     }
 
     public function create(){
-        return view('admin.product.create');
+        $categories = Category::all();
+        return view('admin.product.create', compact('categories'));
+        
     }
 
     public function store(Request $request){

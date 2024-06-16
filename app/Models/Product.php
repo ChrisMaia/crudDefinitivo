@@ -12,12 +12,12 @@ class Product extends Model
     protected $table = 'products';
     protected $fillable = [
         'title',
-        'category',
+        'category_id',
         'price',
     ];
 
     public function category(): BelongsTo
     {
-        return $this->belongsTo(Category::class, 'id'); 
+        return $this->belongsTo(Category::class, 'category_id'); 
     }
 }

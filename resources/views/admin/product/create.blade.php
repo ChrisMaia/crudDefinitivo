@@ -31,16 +31,26 @@
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <div class="col form-floating">
+                            <div class="col ">
+                            <label for="category">Selecione uma Categoria:</label>
+                                <select id="category" name="category_id" class="form-control" required>
+                                    <option value="">Selecione uma Categoria</option>
+                                    @foreach ($categories as $category)
+                                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                    @endforeach
+                                </select>
+
+<!--
                                 <input type="text" name="category" class="form-control" id="floatingInput" placeholder="Categoria">
                                 <label class="text-body-secondary ms-3" for="floatingInput">Categoria</label>
                                 @error('category')
                                     <span class="text-danger">{{$message}}</span>
                                 @enderror
+-->
                             </div>
                         </div>
                         <div class="row mb-3">
-                        <div class="col form-floating"">
+                        <div class="col form-floating">
                                 <input type="number" name="price" class="form-control" id="floatingInput" step="0.01" placeholder="Preço">
                                 <label class="text-body-secondary  ms-3"for="floatingInput">Preço</label>
                                 @error('price')
