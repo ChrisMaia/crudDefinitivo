@@ -35,7 +35,9 @@
                                 <td class="align-middle">{{ $loop->iteration }}</td>
                                 <td class="align-middle">{{ $category->name }}</td>
                                 <td class="align-middle">{{ $category->description }}</td>
-                                <td class="align-middle">.</td>
+                                
+                                <td class="align-middle">{{ $category->products_count }} produtos</td>
+
                                 <td class="align-middle">
                                     <div class="btn-group" role="group" aria-label="Basic example">
                                         <spam class="p-2 ">
