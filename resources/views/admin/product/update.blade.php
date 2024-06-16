@@ -38,10 +38,10 @@
                         </div>
                         <div class="row">
                             <div class="col mb-3 form-floating">
-                                <input type="text" name="price" class="form-control floatingInput" id="price" value="{{$products->price}}">
+                                <input type="text" name="price" class="form-control floatingInput" id="price" value="{{number_format($products->price, 2 , ',' , '.' )}}">
                                 <label class="form-label text-body-secondary ms-3"for="floatingInput">Preço</label>
                                 @error('price')
-                                <span class="text-danger">{{$message}}</span>
+                                <span class="text-danger">O formato do campo Preço é inválido.</span>
                                 @enderror
                             </div>
                         </div>
